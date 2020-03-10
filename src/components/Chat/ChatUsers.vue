@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    ChatUser
+    <!-- ChatUser -->
     <v-card-title>
       <v-list-item-avatar>
         <v-img
