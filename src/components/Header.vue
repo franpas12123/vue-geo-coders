@@ -16,24 +16,7 @@
     <v-app-bar app color="success" dark>
       <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer" /> -->
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          color="success"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <v-toolbar-title>GeoCoders</v-toolbar-title>
       </div>
 
       <v-spacer></v-spacer>
@@ -58,4 +41,7 @@ export default {
 </script>
 
 <style>
+.v-toolbar__title {
+  font-size: 1.5rem;
+}
 </style>
