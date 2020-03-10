@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" style="margin-left: 0px">
+  <v-row justify="center">
     <v-col cols="10" xl="4" lg="6" md="8">
       <v-card>
         <v-card-title class="justify-center">
@@ -27,21 +27,24 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
-  name: "Welcome",
+  name: 'Welcome',
   data() {
     return {
-      name: ""
+      name: ''
     };
   },
   methods: {
+    ...mapActions(['login']),
     submit: function() {
-      alert("name: " + this.name);
-      this.$router.push({ name: "chat", params: { name: this.name } });
+      alert('name: ' + this.name);
+      this.login(this.name);
+      this.$router.push({ name: 'chat', params: { name: this.name } });
     }
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>
