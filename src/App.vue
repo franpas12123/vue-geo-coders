@@ -2,7 +2,7 @@
   <v-app>
     <Header v-if="loggedIn" />
     <v-content>
-      <v-container fluid>
+      <v-container>
         <router-view />
       </v-container>
     </v-content>
@@ -11,10 +11,10 @@
 
 <script>
 // import Content from "./layout/content";
-import Header from "./components/Header";
+import Header from './components/Header';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     Header
