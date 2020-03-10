@@ -15,7 +15,15 @@ const routes = [
     path: '/chat',
     name: 'chat',
     component: Chat,
-    props: true
+    props: true,
+    beforeEnter: (to, from, next) => {
+      if (!to.params.name) {
+        alert('restricted');
+        next({ name: 'welcome' });
+      } else {
+        next();
+      }
+    }
   },
   {
     path: '/about',
